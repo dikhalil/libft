@@ -6,7 +6,7 @@
 /*   By: dikhalil <dikhalil@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 02:17:09 by dikhalil          #+#    #+#             */
-/*   Updated: 2025/08/24 17:00:43 by dikhalil         ###   ########.fr       */
+/*   Updated: 2025/08/25 17:56:21 by dikhalil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ void	*ft_calloc(size_t count, size_t size)
 	if (size && count > SIZE_MAX / size)
 		return (NULL);
 	total = count * size;
-	if (!total)
-		total = 1;
 	ptr = malloc(total);
 	if (!ptr)
 		return (NULL);

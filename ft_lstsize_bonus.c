@@ -1,39 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dikhalil <dikhalil@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/14 03:06:08 by dikhalil          #+#    #+#             */
-/*   Updated: 2025/08/20 20:34:40 by dikhalil         ###   ########.fr       */
+/*   Created: 2025/08/23 17:15:30 by dikhalil          #+#    #+#             */
+/*   Updated: 2025/08/23 17:17:08 by dikhalil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+int	ft_lstsize(t_list *lst)
 {
-	size_t	i;
-	size_t	len_s;
-	char	*sub_str;
+	int	size;
 
-	i = 0;
-	if (!s)
-		return (NULL);
-	len_s = ft_strlen(s);
-	if (start >= len_s)
-		return (ft_strdup(""));
-	if (len > len_s - start)
-		len = len_s - start;
-	sub_str = malloc(len + 1);
-	if (!sub_str)
-		return (NULL);
-	while (i < len && s[start + i])
+	size = 0;
+	if (!lst)
+		return (0);
+	while (lst)
 	{
-		sub_str[i] = s[start + i];
-		i++;
+		size++;
+		lst = lst->next;
 	}
-	sub_str[i] = 0;
-	return (sub_str);
+	return (size);
 }

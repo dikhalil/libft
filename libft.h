@@ -6,18 +6,15 @@
 /*   By: dikhalil <dikhalil@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 17:25:37 by dikhalil          #+#    #+#             */
-/*   Updated: 2025/08/24 17:26:55 by dikhalil         ###   ########.fr       */
+/*   Updated: 2025/08/25 18:16:20 by dikhalil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <limits.h>
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <string.h>
 # include <stdint.h>
 
 typedef struct s_list
